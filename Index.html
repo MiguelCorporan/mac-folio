@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Desarrollador Full Stack</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div id="desktop">
+        <!-- Portfolio Window -->
+        <div id="win-portfolio" class="window" style="display:none;">
+            <div class="window-header">
+                <div class="window-buttons">
+                    <span class="btn btn-red" onclick="closeWindow('win-portfolio')"></span>
+                    <span class="btn btn-yellow"></span>
+                    <span class="btn btn-green"></span>
+                </div>
+                <span class="window-title">📂 Portafolio</span>
+            </div>
+            <div class="content">
+                <h2>Mis Proyectos</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-emoji">💼</div>
+                        <h3>Plataforma Ecommerce</h3>
+                        <p>Sistema de ventas con carrito, pagos y administrador</p>
+                        <span class="tech-tag">React • Node • MongoDB</span>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-emoji">🎨</div>
+                        <h3>Design System</h3>
+                        <p>Librería de componentes reutilizables</p>
+                        <span class="tech-tag">Vue.js • Tailwind</span>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-emoji">📱</div>
+                        <h3>App Móvil</h3>
+                        <p>Aplicación multiplataforma con autenticación</p>
+                        <span class="tech-tag">React Native • Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Window -->
+        <div id="win-about" class="window" style="display:none;">
+            <div class="window-header">
+                <div class="window-buttons">
+                    <span class="btn btn-red" onclick="closeWindow('win-about')"></span>
+                    <span class="btn btn-yellow"></span>
+                    <span class="btn btn-green"></span>
+                </div>
+                <span class="window-title">👨‍💻 Acerca de Mí</span>
+            </div>
+            <div class="content">
+                <h2>Desarrollador Full Stack</h2>
+                <p style="line-height: 1.6; color: #555;">Soy un desarrollador apasionado con 5+ años de experiencia creando soluciones web y móviles. Me especializo en tecnologías modernas y mejores prácticas de desarrollo.</p>
+                <div class="skills-container">
+                    <h3>Tecnologías</h3>
+                    <div class="skills">
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">TypeScript</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">CSS/SCSS</span>
+                        <span class="skill">Git</span>
+                        <span class="skill">REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Window -->
+        <div id="win-code" class="window code-window" style="display:none;">
+            <div class="window-header">
+                <div class="window-buttons">
+                    <span class="btn btn-red" onclick="closeWindow('win-code')"></span>
+                    <span class="btn btn-yellow"></span>
+                    <span class="btn btn-green"></span>
+                </div>
+                <span class="window-title">💻 VS Code</span>
+            </div>
+            <div class="code-editor">
+                <div class="code-sidebar">
+                    <div class="file-item active">App.js</div>
+                    <div class="file-item">Style.css</div>
+                    <div class="file-item">Index.html</div>
+                    <div class="file-item">package.json</div>
+                </div>
+                <div class="code-content">
+                    <pre><code><span class="keyword">function</span> <span class="function">buildPortfolio</span>() {
+  <span class="keyword">const</span> skills = [
+    <span class="string">'React'</span>,
+    <span class="string">'Node.js'</span>,
+    <span class="string">'TypeScript'</span>
+  ];
+  
+  <span class="keyword">return</span> {
+    projects: <span class="number">15</span>,
+    years: <span class="number">5</span>,
+    status: <span class="string">'Disponible'</span>
+  };
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Window -->
+        <div id="win-contact" class="window" style="display:none;">
+            <div class="window-header">
+                <div class="window-buttons">
+                    <span class="btn btn-red" onclick="closeWindow('win-contact')"></span>
+                    <span class="btn btn-yellow"></span>
+                    <span class="btn btn-green"></span>
+                </div>
+                <span class="window-title">📧 Contacto</span>
+            </div>
+            <div class="content">
+                <h2>Ponte en Contacto</h2>
+                <div class="contact-info">
+                    <div class="info-item">📧 <strong>Email:</strong> developer@example.com</div>
+                    <div class="info-item">🔗 <strong>GitHub:</strong> github.com/yourprofile</div>
+                    <div class="info-item">💼 <strong>LinkedIn:</strong> linkedin.com/in/profile</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Window -->
+        <div id="win-settings" class="window" style="display:none;">
+            <div class="window-header">
+                <div class="window-buttons">
+                    <span class="btn btn-red" onclick="closeWindow('win-settings')"></span>
+                    <span class="btn btn-yellow"></span>
+                    <span class="btn btn-green"></span>
+                </div>
+                <span class="window-title">⚙️ Preferencias</span>
+            </div>
+            <div class="content">
+                <h3>Ajustes del Sistema</h3>
+                <div class="setting-item">
+                    <label>Modo Oscuro</label>
+                    <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+                </div>
+                <div class="setting-item">
+                    <label>Sonido</label>
+                    <input type="checkbox" checked>
+                </div>
+                <div class="setting-item">
+                    <label>Animaciones</label>
+                    <input type="checkbox" checked>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dock -->
+    <div class="dock-container">
+        <div class="dock">
+            <div class="dock-item" onclick="openWindow('win-portfolio')" title="Portafolio">📂</div>
+            <div class="dock-item" onclick="openWindow('win-about')" title="Acerca de Mí">👨‍💻</div>
+            <div class="dock-item" onclick="openWindow('win-code')" title="Código">💻</div>
+            <div class="dock-item" onclick="openWindow('win-contact')" title="Contacto">📧</div>
+            <div class="dock-separator"></div>
+            <div class="dock-item" onclick="openWindow('win-settings')" title="Configuración">⚙️</div>
+        </div>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+</html>
